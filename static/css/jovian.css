@@ -1,0 +1,56 @@
+.container img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+
+  .btn-light {
+    background-color: blue;
+    color: white;
+    transition: transform 0.5s;
+  }
+  .btn-light:hover {
+    background-color: white;
+    color: blue;
+    transform: scaleX(1.2);
+  }
+.btn-primary {
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.2);
+  }
+  .btn-primary{
+    width: 200px;
+  }
+ .btn-primary span {
+  display: inline-block;
+  transition: transform 0.3s ease-in;
+}
+
+.btn-primary:hover span {
+  transform: translateX(-10px);
+  font-weight: bold;
+}
+
+.btn-primary:hover span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 1px;
+  margin-right: 10px;
+  background-color: currentColor;
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

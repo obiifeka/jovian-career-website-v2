@@ -1,0 +1,11 @@
+<div class="border-bottom d-flex justify-content-between align-items-start p-4">
+    <div>
+      <h5 class="mb-1">{{ job.title }}</h5>
+      <div><strong>Location:</strong> {{ job.location }}</div>
+      {% if 'salary' in job %}
+      <div><strong>Salary:</strong> <span class="badge bg-secondary">{{ job.salary }}</span>
+       </div>
+       {% endif %}
+    </div>
+    <a href="#" class="btn btn-light btn-md mt-2">Apply</a>
+</div>
