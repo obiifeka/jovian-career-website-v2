@@ -1,4 +1,4 @@
-from flask import Flask,redirect,url_for,render_template,request,jsonify
+from flask import Flask,redirect,url_for,render_template,request,jsonify, url_for
 
 
 app=Flask(__name__)
@@ -15,7 +15,7 @@ jobs = [
 
 @app.route('/')
 def home():
-        return render_template('index.html',jobs=jobs)
+        return render_template('index.html',jobs=jobs,company = 'Jovian')
     
 
 @app.route('/index')

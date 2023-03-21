@@ -3,6 +3,12 @@
   height: auto;
   max-height: 500px;
 }
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 70px; /* adjust this value to match the height of your footer */
+  }
+}
+
 
 
   .btn-light {

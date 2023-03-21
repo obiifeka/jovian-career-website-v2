@@ -4,7 +4,7 @@
 <!-- Image Banner -->
 
 <div class="container-fluid">
-  <h1> Jovian Careers</h1>
+   <h1 class="text-center"> {{ company }} Careers</h1>
   <img src="{{ url_for('static', filename='images/clark-tibbs-oqStl2L5oxI-unsplash.jpg') }}" alt="Jovian Careers Banner">
 </div>
 
@@ -12,15 +12,26 @@
 
 <!-- About Section -->
 <div class="container my-5">
-  <h2 class="text-center">About Jovian Careers</h2>
-  <p>
-    Jovian Careers is a leading company in the field of technology recruitment.
-    We specialize in connecting talented professionals with top companies in the
-    industry.
-  </p>
-  <p>Check out our latest job openings below and apply today!</p>
+   <h2 class="text-center"  style="margin-bottom:16px" > About Jovian</h2>
+<div class="row" style="margin-bottom:16px">
+  
+  <div class="col-sm-6">
+  
+    <p>
+      Jovian Careers is a leading company in the field of technology recruitment.
+      We specialize in connecting talented professionals with top companies in the
+      industry.
+    </p>
+    </div>
+    <div class="d-none d-sm-block col-sm-6">
+        <img src="{{ url_for('static', filename='images/employees.jpg') }}" alt="Jovian Employees" class="img-fluid">
 
-<h1>Job Openings List</h1>
+  
+  </div>
+</div>
+
+<div>
+<h1  class="text-center">Job Openings List</h1>
 {% if jobs %}
 <div class="list-group">
   {% for job in jobs %}
@@ -30,13 +41,12 @@
 {% else %}
 <p>No jobs found.</p>
 {% endif %}
+</div>
 
 
 <div class=" col-6 mx-auto mt-4 text-center">
-  <a href="#" class="btn btn-primary btn-sm"><span>Contact Us</span></a>
-  <div class="text-center mt-4">
-    <p>copyright 2023, Jovian</p>
-  </div>
+  <a href="mailto:obiifeka5@gmail.com?subject=Contact&body=My%20name%3A%20%3CYour%20name%20here%3E%0D%0AMy%20Resume%20Link%3A%20%3Cresume%20link%3E%0D%0AMy%20Question%3A%20%3CEnter%20Question%20Here%3E%0D%0A" class="btn btn-primary btn-sm"><span>Contact Us</span></a>
+ 
 </div>
 
 
